@@ -1,0 +1,21 @@
+DRAWPHONE PARA REMOTEWATCH - INSTRUCCIONES
+
+1. Descomprime el ZIP. En GitHub, entra en tu repositorio privado remotewatch-servers.
+2. Add file > Upload files: sube la carpeta drawphone con todo su contenido (GitHub puede requerir arrastrar los archivos/carpetas y respetar la estructura). Commit changes.
+3. En Render > New > Web Service > selecciona tu repositorio.
+4. Name: remotewatch-drawphone
+   Language: Node
+   Branch: main
+   Root Directory: drawphone
+   Build Command: npm install --legacy-peer-deps && npm run build:prod
+   Start Command: npm run start:prod
+   Plan: Free, si esta disponible
+   Environment: NODE_ENV=production y NODE_VERSION=20
+   No introduzcas PORT; Render lo asigna.
+5. Create Web Service. Revisa los logs. Cuando funcione, tendras una URL https://...onrender.com
+6. Prueba con dos navegadores distintos. Esto verifica Drawphone independientemente de RemoteWatch.
+
+IMPORTANTE: No se ha podido ejecutar un despliegue real de Render desde este entorno.
+Dependencias antiguas del codigo fuente pueden requerir correcciones adicionales.
+La pagina de RemoteWatch aun necesitara una integracion interna para abrir este servicio.
+No subir este ZIP tal cual a Cloudflare Pages. No publicar secretos.
